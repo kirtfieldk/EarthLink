@@ -28,7 +28,8 @@ passport.use(
         return done(null, existingUser);
       }
       const user = await new User({
-        userId: profile.id
+        userId: profile.id,
+        name: profile.name
       }).save();
       done(null, user);
     }
@@ -48,7 +49,8 @@ passport.use(
         return done(null, existingUser);
       }
       const user = await new User({
-        userId: profile.id
+        userId: profile.id,
+        name: profile.given_name
       }).save();
       done(null, user);
     }
