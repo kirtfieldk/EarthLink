@@ -1,4 +1,3 @@
-// import DropBar from "./DropBar";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
@@ -16,9 +15,11 @@ export class Nav extends Component {
         );
       default:
         return (
-          <Link className="item float-right" to="/profile">
-            Welcome!
-          </Link>
+          <div>
+            <Link className="item float-right" to="/profile">
+              Welcome!
+            </Link>
+          </div>
         );
     }
   };

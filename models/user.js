@@ -1,7 +1,9 @@
-const MongoClient = require("mongoose");
-const { Schema } = MongoClient;
+const mongoose = require("mongoose");
+const { Schema } = mongoose;
 const userSchema = new Schema({
   userId: String,
-  name: String
+  name: String,
+  email: String
 });
-MongoClient.model("users", userSchema);
+console.log("created users dataBase");
+mongoose.model("user", userSchema);

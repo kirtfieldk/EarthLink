@@ -8,7 +8,7 @@ import Nav from "./Components/Nav";
 import Home from "./Components/Home";
 import About from "./Components/About";
 import SignIn from "./Components/SignIn";
-import Profile from "./Components/Profile";
+import Profile from "./Components/Profile/Profile";
 // import axios from 'axios'
 
 const App = props => {
