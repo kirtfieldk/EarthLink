@@ -6,4 +6,4 @@ const userSchema = new Schema({
   email: String
 });
 console.log("created users dataBase");
-mongoose.model("user", userSchema);
+mongoose.model("users", userSchema);

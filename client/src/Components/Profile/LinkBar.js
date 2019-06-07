@@ -1,7 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import UploadAction from "./uploadAction";
-
+import { Link } from "react-router-dom";
 class Profile extends React.Component {
   renderProfile = () => {
     if (this.props.auth) {
@@ -10,8 +9,15 @@ class Profile extends React.Component {
           <div className="setting-title">Welcome {this.props.auth.name}!</div>
           <div className="setting-sidebar">
             <ul>
-              <li>Uploads</li>
-              <li>Explore</li>
+              <Link to="/profile">
+                <li>Upload</li>
+              </Link>
+              <Link to="/profile/addblogpost">
+                <li>Add Post</li>
+              </Link>
+              <Link to="/profile/personalblogpost">
+                <li>Blog Posts</li>
+              </Link>
               <li>Settings</li>
               <li>Privacy</li>
               <li>
@@ -27,15 +33,8 @@ class Profile extends React.Component {
   };
 
   render() {
-    return (
-      <div>
-        {this.renderProfile()}
-
-        <div className="upload-btn">
-          <UploadAction />
-        </div>
-      </div>
-    );
+    console.log(this.props.auth);
+    return <div>{this.renderProfile()}</div>;
   }
 }
 

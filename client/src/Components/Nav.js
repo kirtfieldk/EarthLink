@@ -31,7 +31,13 @@ export class Nav extends Component {
           Home
         </Link>
         <Link className="item float-left" to="/about">
-          about
+          About
+        </Link>
+        <Link className="item float-left" to="/team">
+          The Team
+        </Link>
+        <Link className="item float-left" to="/about">
+          Shop
         </Link>
         {this.renderSignInBttn()}
       </div>
