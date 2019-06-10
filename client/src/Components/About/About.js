@@ -32,8 +32,11 @@ class About extends Component {
           </div>
           <div className="picture p2" />
           {/* End of row 2 */}
-          <div className="row">
-            <BlogPost />
+          <div className="about-blog grid-container">
+            <div className="row our-journey center">Read Our Stories</div>
+            <div className="row">
+              <BlogPost />
+            </div>
           </div>
         </div>
       </div>

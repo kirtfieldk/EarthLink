@@ -117,8 +117,7 @@ h6 {
 /*
 END TEAM PAGE
 */
-.model,
-.icon {
+.model {
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -140,12 +139,27 @@ END TEAM PAGE
   font-size: 3rem;
   margin: 0;
 }
+.description{
+  grid-column: 2/6;
+  font-size: 3rem;
+  line-height: 4.5rem;
+  font-weight: bolder;
+  margin: 40px auto;
+}
 .model h6 {
   font-size: 1.4rem;
   padding-bottom: 10px;
 }
-.icon i,
-.icon {
+.icon{
+  grid-column: 9/14;
+  background: rgba(44, 49, 49, 0.45);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.full-width{
+  margin: 40px auto;
+  width: 80%;
+}
+.icon i{
   z-index: 1;
   padding-top: 2px;
   font-size: 1.2rem;
@@ -196,7 +210,6 @@ button {
 button a:hover {
   color: whitesmoke;
 }
-
 .fill:before,
 button a:before {
   content: "";
@@ -397,6 +410,9 @@ IF VALID OR INVALID INPUTS
 .mt-20 {
   margin-top: 20px;
 }
+.white{
+  color: white;
+}
 .ml-20 {
   margin-left: 20px;
 }
@@ -406,9 +422,22 @@ IF VALID OR INVALID INPUTS
 /*
 DISPLAYING THE BLOGS!!
 */
+.our-journey{
+  border-bottom-style: solid;
+  grid-column: 2/13;
+  font-size: 2rem;
+  line-height: 4rem;
+}
+.about-blog{
+  grid-column: 1/-1;
+  background-color:rgba(123, 133, 133, 0.5);
+  margin: 0;
+  padding: 0;
+}
 .blog-body {
   grid-column: 2/13;
   border-style: solid;
+  background-color: white;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   margin: 15px 0;
   cursor: pointer;
@@ -437,3 +466,28 @@ DISPLAYING THE BLOGS!!
   transition: .5s;
   background-color: red;
 }
+/*
+MODEL DESIGN 
+ */
+ .full-screen{
+   position: absolute;
+   margin: 0;
+   width: 100vw;
+   height: 97vh;
+   overflow: hidden;
+   background-color: rgba(123, 133, 133, 0.5);
+   z-index: 3;
+ }
+ .model-body{
+    margin: auto;
+    grid-column: 3/12;
+    border-style: solid;
+   background-color:silver;
+   border-radius: 12px;
+ }
+ .model-title{
+   width: 100%;
+   text-align: center;
+   border-bottom-style: solid;
+   padding: 20px 0;
+ }

@@ -20,7 +20,7 @@ const App = props => {
     props.fetchUser();
     props.retrieveBlogPost();
     props.retrieveUserPost();
-  }, [props.retrieveBlogPost]);
+  }, [props]);
   return (
     <div>
       <Router>
