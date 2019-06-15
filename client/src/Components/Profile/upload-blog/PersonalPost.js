@@ -15,6 +15,9 @@ const PersonalPost = ({ UserSpecificPost, history, retrieveUserPost }) => {
   useEffect(() => {
     retrieveUserPost();
   });
+  const changeDisplay = () => {
+    showDeleteModel(!deleteModel);
+  };
   const displayModel = () => {
     if (deleteModel) {
       return (
@@ -22,16 +25,18 @@ const PersonalPost = ({ UserSpecificPost, history, retrieveUserPost }) => {
           postTitle={titleToRemove}
           id={_idToDelete}
           history={history}
+          show={changeDisplay}
         />
       );
     }
   };
-
+  // If user chooses to delete post
+  // Save the titel and id
   const deletePost = (_id, title) => {
     setTitleToRemove(title);
-    showDeleteModel(!deleteModel);
     set_id(_id);
   };
+  // Render the personal blog post
   const renderPersonalPost = () => {
     if (!UserSpecificPost) {
       return <div>Loading...</div>;
@@ -39,18 +44,22 @@ const PersonalPost = ({ UserSpecificPost, history, retrieveUserPost }) => {
       return UserSpecificPost.map(({ title, summery, _id }) => {
         return (
           <div key={_id}>
-            {displayModel()}
             <div className="grid-container">
               <div className="blog-body">
                 <div className="blog-title">{title}</div>
                 <div className="blog-blody">{summery}</div>
                 <div className="button">
+                  {/* Button to delete post */}
                   <button
                     className="post-button"
-                    onClick={() => deletePost(_id, title, history)}
+                    onClick={() => {
+                      deletePost(_id, title, history);
+                      changeDisplay();
+                    }}
                   >
                     Delete Post
                   </button>
+                  {/* Button to delete post */}
                 </div>
               </div>
             </div>
@@ -60,7 +69,12 @@ const PersonalPost = ({ UserSpecificPost, history, retrieveUserPost }) => {
     }
   };
   // Return method to display the contents
-  return <div>{renderPersonalPost()}</div>;
+  return (
+    <div>
+      {displayModel()}
+      {renderPersonalPost()}
+    </div>
+  );
 };
 const mapStateToProps = ({ UserSpecificPost }) => {
   return { UserSpecificPost };

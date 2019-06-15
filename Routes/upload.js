@@ -19,7 +19,7 @@ module.exports = app => {
     if (!req.user) {
       return res.status(401).send({ error: "You must be logged in" });
     }
-    const { title, author, body, summery, display } = req.body;
+    const { title, author, body, summery } = req.body;
     const blog = new blogPost({
       title,
       author,
