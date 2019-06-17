@@ -15,12 +15,21 @@ body {
 .home-page {
   height: 50vh;
   width: 100vw;
-  background-image: url("./Img/valley.jpg");
+  background-image: url("../Img/valley.jpg");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
   z-index: 1;
   margin: 0;
+}
+/* FULL SCREEN */
+.full-width-screen{
+  width: 100vw;
+}
+.full{
+  height: 97vh;
+  margin: 0;
+  position: absolute;
 }
 .bottom-contact {
   position: relative;
@@ -30,6 +39,7 @@ body {
   text-align: center;
   width: 100%;
 }
+/*  */
 h1,
 h3,
 h2,
@@ -40,47 +50,11 @@ h6 {
   margin: 0;
   display: inline;
 }
-/* Add a black background color to the top navigation */
-.topnav {
-  background-color: #333;
-  overflow: hidden;
-  margin: 0;
-  position: sticky;
-}
 
-/* Style the links inside the navigation bar */
-.topnav .item {
-  height: 3vh;
-
-  color: #f2f2f2;
-  text-align: center;
-  padding: 0 16px;
-  text-decoration: none;
-  font-size: 0.7rem;
-}
-
-/* Change the color of links on hover */
-.topnav .item:hover {
-  margin: 0;
-  background-color: #ddd;
-  color: black;
-}
-
-/* Add a color to the active/current link */
-.topnav .item.active {
-  background-color: #4caf50;
-  color: white;
-}
-.float-left {
-  float: left;
-}
-.float-right {
-  float: right;
-}
 /* About Page Intro */
 .about-page-intro {
   margin: 20px 0;
-  background-image: url("./Img/Waterfall.jpg");
+  background-image: url("../Img/Waterfall.jpg");
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   height: 60vh;
   width: 100vw;
@@ -93,7 +67,7 @@ h6 {
  TEAM PAGE
 */
 .team-page {
-  background-image: url("./Img/founderHero.jpg");
+  background-image: url("../Img/founderHero.jpg");
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   height: 60vh;
   width: 100vw;
@@ -106,13 +80,26 @@ h6 {
   grid-column: 1/7;
 }
 .keith-img {
-  background-image: url("./Img/founderHero.jpg");
+  background-image: url("../Img/founderHero.jpg");
 }
 .keith-bio {
   grid-column: 7/11;
 }
-.bio-block {
-  border-style: solid;
+.keith-bio-block {
+  /* box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); */
+  margin-top: 20px; 
+  height: 47vh;
+  grid-column: 2/6;
+  border-radius: 25px;
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+}
+.mikey-bio-block {
+  /* box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); */
+  margin-top: 20px; 
+  height: 47vh;
+  grid-column: 7/11;
+  border-radius: 25px;
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
 }
 
 /*
@@ -232,7 +219,17 @@ button a:hover:before {
 button a:hover {
   color: whitesmoke;
 }
-
+/* SOCIAL MEDIA ICONS */
+.fab{
+  font-size: 1.5rem;
+}
+.bg-white{
+  color: white;
+  background-color:black;
+}
+.bg-black{
+  background-color: black;
+}
 /*
 THE BEGINNING OF THE PHOTO AND ABOUT PAGE STYLING
 */
@@ -268,7 +265,7 @@ THE BEGINNING OF THE PHOTO AND ABOUT PAGE STYLING
   margin: 0;
 }
 .p1 {
-  background-image: url("./Img/black-white-tree.jpg");
+  background-image: url("../Img/black-white-tree.jpg");
   opacity: .2;
   grid-column: 5/10;
   margin: 0;

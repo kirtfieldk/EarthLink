@@ -31,7 +31,7 @@ export class Nav extends Component {
           Home
         </Link>
         <Link className="item float-left" to="/about">
-          About
+          Blog
         </Link>
         <Link className="item float-left" to="/team">
           The Team

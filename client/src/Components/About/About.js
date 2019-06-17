@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import BlogPost from "./blogPost.js";
 import Hero from "../Hero";
+import SocialMedia from "../Misc/Social-Media";
 
 class About extends Component {
   render() {
@@ -25,7 +26,7 @@ class About extends Component {
           </div>
           {/* End of the first row */}
           {/* IMAGE */}
-          <div className = "p1"></div>
+          <div className="p1" />
           {/* END OF IMAGE */}
           <div className="left-text-body-sec">
             <p>
@@ -41,15 +42,17 @@ class About extends Component {
               world.
             </p>
           </div>
-          {/* End of row 2 */}
-          <div className="about-blog grid-container">
-            <div className="row our-journey center">Read Our Stories</div>
-            <div className="row">
-              <BlogPost />
-            </div>
+        </div>
+        <SocialMedia />
+        {/* End of row 2 */}
+        <div className="about-blog full-width-screen">
+          <div className="row our-journey center">Read Our Stories</div>
+          <div className="row">
+            <BlogPost />
           </div>
         </div>
-        <Hero page = "about-page-intro" title = "Never Stop Exploring"/>
+
+        <Hero page="about-page-intro" title="Never Stop Exploring" />
       </div>
     );
   }

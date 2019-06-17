@@ -2,11 +2,11 @@ import React from "react";
 
 function Keith() {
   return (
-    <div className=" bio-block grid-container">
-      <div className=" three-seven">
-        <div className="keith-img" />
+    <div className=" keith-bio-block ">
+      <div className="keith-img" />
+      <div className="keith-bio">
+        <h3 className="center">Keith Kirtfield</h3>
       </div>
-      <div className="keith-bio" />
     </div>
   );
 }

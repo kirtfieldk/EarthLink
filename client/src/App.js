@@ -1,5 +1,7 @@
 import React from "react";
-import "./App.css";
+import "./style/App.css";
+import "./style/social.css";
+import "./style/nav.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { useEffect } from "react";
 import * as actions from "./actions";

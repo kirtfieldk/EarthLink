@@ -1,7 +1,7 @@
 import React from "react";
 const SignIn = () => {
   return (
-    <div className="home-page grid-container">
+    <div className="home-page full grid-container">
       <div className = "description center white">
         Join Our Team and Help Us Descover and Save The World over
       </div>
