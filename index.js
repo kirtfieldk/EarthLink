@@ -7,11 +7,11 @@ const keys = require("./config/keys");
 
 const path = require("path");
 mongoose.Promise = global.Promise;
-
 mongoose.connect(keys.mongoURI);
 // The models for the database
 require("./models/User");
 require("./models/Blog");
+require("./models/Email");
 //
 require("./Service/passport");
 
@@ -28,6 +28,7 @@ app.use(passport.session());
 
 require("./Routes/AuthRoutes")(app);
 require("./Routes/upload")(app);
+require("./Routes/NewsLetter")(app);
 if (process.env.NODE_ENV === "production") {
   //Express will serve up production assessts like main.js
   //If there is a rounr Express knows nothing about go here

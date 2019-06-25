@@ -3,7 +3,6 @@ import LinkBar from "../LinkBar";
 import BlogField from "./BlogField";
 import { reduxForm, Field } from "redux-form";
 import blogValues from "./blogPostFields";
-import reviewField from "./ReviewField";
 import ReviewField from "./ReviewField";
 
 const AddBlogpost = props => {

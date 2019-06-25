@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const login = require("../Middleware/reqLogin");
 const blogPost = mongoose.model("Blog");
 
 module.exports = app => {
@@ -40,7 +39,7 @@ module.exports = app => {
   });
   // /api/blogpost/delete/:id deletes an entry in the database
   //
-  app.get("/api/blogpost/delete/:id", (req, res, next) => {
+  app.get("/api/blogpost/delete/:id", (req, res) => {
     blogPost.findByIdAndRemove({ _id: req.params.id }).then(post => {
       res.send(post);
     });

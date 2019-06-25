@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 const SocialMedia = () => {
   const [iconSelect, changeIconSelect] = useState("");
@@ -10,19 +10,19 @@ const SocialMedia = () => {
             className="instagram"
             onClick={() => changeIconSelect("instagram")}
           >
-            <i class="fab bg-white fa-instagram social" />
+            <i className="fab bg-white fa-instagram social" />
           </div>
           <div className="youtube" onClick={() => changeIconSelect("youtube")}>
-            <i class="fab bg-white fa-youtube social" />
+            <i className="fab bg-white fa-youtube social" />
           </div>
           <div className="twitter" onClick={() => changeIconSelect("twitter")}>
-            <i class="fab bg-white fa-twitter social" />
+            <i className="fab bg-white fa-twitter social" />
           </div>
           <div
             className="facebook"
             onClick={() => changeIconSelect("facebook")}
           >
-            <i class="fab bg-white fa-facebook-f social" />
+            <i className="fab bg-white fa-facebook-f social" />
           </div>
           <div className="center-grid">{renderSocialBio()}</div>
         </div>

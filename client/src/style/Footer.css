@@ -1,0 +1,81 @@
+.bottom-contact {
+  position: relative;
+  bottom: 0%;
+  margin: 0;
+  height: 23vh;
+  background-color: #383736;
+  text-align: center;
+  width: 100%;
+}
+.sign-up {
+  grid-column: 9/13;
+
+  /* margin-top: 10px; */
+  width: 100%;
+  /* border-style: solid; */
+}
+.sign-up-title {
+  grid-column: 9/13;
+  font-size: 1.2rem;
+  color: white;
+  margin: 10px 0 0 0;
+  border-top: solid;
+  text-align: center;
+}
+.input-email {
+  grid-column: 7/12;
+}
+.newsletter-input {
+  height: 30px;
+  font-size: 1rem;
+  margin: 0;
+  width: 70%;
+  float: left;
+}
+.email-button {
+  /* border-style: solid; */
+  padding: 5px 0;
+  width: 25%;
+  font-size: 1.2rem;
+  height: 26px;
+  float: right;
+  cursor: pointer;
+  background-color: green;
+}
+.email-button:hover {
+  background-color: chartreuse;
+}
+.error {
+  border-bottom-style: solid;
+  /* border-color: red; */
+  color: white;
+  animation: growth 0.9 ease-in;
+  -webkit-animation: growth 0.2 ease-in;
+}
+.success {
+  border-bottom-style: solid;
+  /* border-color: red; */
+  color: white;
+  animation: growth 0.9 ease-in;
+  -webkit-animation: growth 0.2 ease-in;
+}
+@keyframes growth {
+  from {
+    border-width: 1%;
+    border-color: white;
+  }
+  to {
+    border-width: 100%;
+    border-color: red;
+  }
+}
+@-webkit-keyframes growth {
+  from {
+    width: 0;
+    border-color: white;
+  }
+  to {
+    width: 100%;
+    border-color: red;
+  }
+}

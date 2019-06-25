@@ -6,6 +6,7 @@ import userPost from "./retrievePost";
 import postId from "./showPost";
 import UserSpecificPost from "./userSpecificPost";
 import DeletedPost from "./deletedPost";
+import addUser from "./NewsLetterUser";
 export default combineReducers({
   auth: authReducer,
   blog: blogPostReducer,
@@ -13,5 +14,6 @@ export default combineReducers({
   postId,
   UserSpecificPost,
   DeletedPost,
-  form: formReducer
+  form: formReducer,
+  addUser
 });

@@ -24,7 +24,12 @@ export const retrieveUserPost = () => async dispatch => {
 };
 export const deleteUserPost = (userId, history) => async dispatch => {
   const response = await axios.get(`/api/blogpost/delete/${userId}`);
-  console.log("called");
   history.push("/profile");
   dispatch({ type: "DELETED_POST", payload: response.data });
+};
+export const addUserToNewsLetter = email => async dispatch => {
+  const response = await axios.post("/api/addtonewsletter", {
+    newsLetterEmail: email
+  });
+  dispatch({ type: "ADDED_USER", payload: response.data });
 };

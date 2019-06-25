@@ -1,12 +1,16 @@
 import React from "react";
+// Style sheets
 import "./style/App.css";
 import "./style/social.css";
 import "./style/nav.css";
+import "./style/founder.css";
+import "./style/Footer.css";
+// 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { useEffect } from "react";
 import * as actions from "./actions";
 import { connect } from "react-redux";
-import LLC from "./Components/LLC";
+import LLC from "./Components/Footer/LLC";
 import Nav from "./Components/Nav";
 import Home from "./Components/Home";
 import About from "./Components/About/About";

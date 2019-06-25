@@ -1,3 +1,4 @@
+// This is the login user dataBase.
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 const userSchema = new Schema({
